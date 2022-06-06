@@ -7,11 +7,11 @@ from .. import Flame, Flame2, Flame3, Flame4, Flame5, Flame6, Flame7, Flame8, Fl
 from RiZoeLXSpam.plugins.help import *
 
 
-RIZ_IMG = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/ba87c58f01a6fcb5ef512.jpg"
+RIZ_IMG = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/2c23f012984fa91267146.jpg"
 
 Flame_Button = [
         [
-        Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/flame_project")
+        Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/random_spamer")
         ],
         [
         Button.inline("• ᴄᴍᴅs •", data="help_back")
@@ -20,11 +20,11 @@ Flame_Button = [
                
 FlameX_Button = [
         [
-        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/FlameSpam"),
-        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/flameSpam")
+        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/flame_updates"),
+        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/random_spamer")
         ],
         [
-        Button.url("• ʀᴇᴘᴏ •", "https://github.com/S780821/ғˡᵃᵐᵉsᵖᵃᵐᵘ́")
+        Button.url("• ʀᴇᴘᴏ •", "https://github.com/S780821/FlameSpam")
         ]
         ]
         
@@ -52,16 +52,16 @@ async def start(event):
        TheRiZoeL = event.chat_id
        firstname = replied_user.user.first_name
        ownermsg = f"**Hi Master, Its me {bot_id}, Your Spam Bot !! \n\n Click Below Buttons For help**"
-       usermsg = f"**Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Below.** \n\n**𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 [𝐑𝐈𝐙𝐎𝐄𝐋 𝐗](https://t.me/RiZoeLX)**"
+       usermsg = f"**Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Below.** \n\n**𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 [ FLAME ](https://t.me/FLAME_UPDATES)**"
        if event.sender_id == OWNER_ID:
             await event.client.send_file(ThflameL,
-                  RIZ_IMG,
+                  FLAME_IMG,
                   caption=ownermsg, 
                   buttons=Flame_Button)
        else:
             await event.client.send_file(flame,
                   FLAME_IMG,
                   caption=usermsg, 
-                  buttons=FlameX_Button)
+                  buttons=Flame_Button)
                 
 
