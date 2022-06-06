@@ -12,7 +12,7 @@ from telethon.tl.custom import button
 from time import time
 from datetime import datetime
 
-FLM_PIC = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/ba87c58f01a6fcb5ef512.jpg"
+FLM_PIC = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/2c23f012984fa91267146.jpg"
   
 
 flame = "✯ 🇫ʟᴀᴍᴇ sᴘᴀᴍᴍᴇʀ ɪᴢ ʜᴇʀᴇ ✯\n\n"
@@ -40,7 +40,7 @@ async def alive(event):
                                   caption=flame,
                                   buttons=[
         [
-        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/FlameSpam"),
+        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/Random_Spamer"),
         Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/Flame_Project")
         ],
         [
