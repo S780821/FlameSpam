@@ -1,0 +1,5 @@
+build:
+  docker:
+    Flame: Dockerfile
+run:
+  Flame: python3 -m FlameSpam
