@@ -3,7 +3,7 @@ import asyncio
 import sys
 import git
 import heroku3
-from RiZoeLXSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Flame8, Flame9, Flame10, OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, Flameversion
+from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Flame8, Flame9, Flame10, OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, Flameversion
 from FlameSpam import CMD_HNDLR as hl
 from telethon.tl.functions.users import GetFullUserRequest
 from FlameSpam import ALIVE_PIC
@@ -36,7 +36,7 @@ flame += f"═══════════════════\n\n"
 async def alive(event):
   if event.sender_id in SUDO_USERS:
      await event.client.send_file(event.chat_id,
-                                  RIZ_PIC,
+                                  FLAME_PIC,
                                   caption=flame,
                                   buttons=[
         [
@@ -44,7 +44,7 @@ async def alive(event):
         Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/Flame_Project")
         ],
         [
-        Button.url("• ʀᴇᴘᴏ •", "https://github.com/S780821/FlameSpamBot")
+        Button.url("• ʀᴇᴘᴏ •", "https://github.com/S780821/FlameSpam")
         ]
         ]
         )
