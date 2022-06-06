@@ -5,7 +5,7 @@ from time import time
 from datetime import datetime
 from FlameSpam import CMD_HNDLR as hl
     
-HELP_PIC = "https://telegra.ph/file/9acc785291052c8f8998d.jpg"
+HELP_PIC = "https://telegra.ph/file/2c23f012984fa91267146.jpg"
 
 Flame_Help = "__Click On Below Buttons for help__"
 
@@ -34,7 +34,7 @@ async def help(event):
             Button.inline("• Extra •", data="extra"),
            ],
            [    
-            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/flameSpam")
+            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/Random_Spamer")
            ],
            ],
            )              
@@ -149,7 +149,7 @@ async def helpback(event):
             Button.inline("Extra cmds", data="extra"),
            ],
            [    
-            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/flamespam")
+            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/random_spamer")
            ],
            ],
         )           
