@@ -23,7 +23,7 @@ async def leave(e):
     if e.sender_id in SUDO_USERS:
         flame = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
-            bc = rizoel[0]
+            bc = flame[0]
             Xd = int(bc)
             text = "Leaving....."
             event = await e.reply(text, parse_mode=None, link_preview=None )
