@@ -7,7 +7,7 @@ from telethon import events
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Flame8, Flame9, Flame10, SUDO_USERS, OWNER_ID
-from resources.data import RAID, REPLYRAID, Flame
+from resources.data import RAID, REPLYRAID, FLAME
 from FlameSpam import CMD_HNDLR as hl
 
 
@@ -31,11 +31,11 @@ async def spam(e):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         RiZoeL = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         bitxh = await e.get_reply_message()
-        if len(RiZoeL) == 2:
-            user = str(RiZoeL[1])
+        if len(FLAME) == 2:
+            user = str(FLAME[1])
             a = await e.client.get_entity(user)
             g = a.id
-            if int(g) in Flame:
+            if int(g) in FLAME:
                 text = f"I can't raid on @Flame's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
@@ -47,7 +47,7 @@ async def spam(e):
             else:
                 c = a.first_name
                 username = f"[{c}](tg://user?id={g})"
-                counter = int(RiZoeL[0])
+                counter = int(FLAME[0])
                 for _ in range(counter):
                     reply = random.choice(RAID)
                     caption = f"{username} {reply}"
@@ -58,7 +58,7 @@ async def spam(e):
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if int(g) in Flame:
+            if int(g) in FLAME:
                 text = f"I can't raid on @Flame's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
@@ -69,7 +69,7 @@ async def spam(e):
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
                 c = b.first_name
-                counter = int(RiZoeL[0])
+                counter = int(FLAME[0])
                 username = f"[{c}](tg://user?id={g})"
                 for _ in range(counter):
                     reply = random.choice(RAID)
@@ -121,14 +121,14 @@ async def _(e):
     global que
     usage = f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n{hl}replyraid <Username of User>\n\n{hl}replyraid <reply to a User>."
     if e.sender_id in SUDO_USERS:
-        RiZoeL = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        Flamex = await e.get_reply_message()
+        FLAME = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        FLAME = await e.get_reply_message()
         if len(e.text) > 11:
             message = str(RiZoeL[0])
             a = await e.client.get_entity(message)
             user_idd = a.id
             user_id = int(user_idd)
-            if int(user_id) in Flame:
+            if int(user_id) in FLAME:
                 text = f" can't raid on @Flame's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
@@ -149,7 +149,7 @@ async def _(e):
             umser = await e.client.get_entity(a.sender_id)
             user_idd = umser.id
             user_id = int(user_idd)
-            if int(user_id) in Flame:
+            if int(user_id) in FLAME:
                 text = f" can't raid on @Flame's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
@@ -185,10 +185,10 @@ async def _(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        Flameoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        FLAME = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
         if len(e.text) > 12:
-            message = str(Flameoel[0])
+            message = str(FLAME[0])
             a = await e.client.get_entity(message)
             g = a.id
             try:
@@ -227,12 +227,12 @@ async def _(event):
    if event.sender_id in SUDO_USERS:
          if event.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-         RiZoeL = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
-         if len(RiZoeL) == 3:
+         FLAME = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
+         if len(FLAME) == 3:
              user = str(RiZoeL[2])
              a = await event.client.get_entity(user)
              e = a.id
-             if int(e) in Flame:
+             if int(e) in FLAME:
                     text = f"I can't raid on @Flame's Owner"
                     await event.reply(text, parse_mode=None, link_preview=None )
              elif int(e) == OWNER_ID:
@@ -244,8 +244,8 @@ async def _(event):
              else:
                  c = a.first_name
                  username = f"[{c}](tg://user?id={e})"
-                 counter = int(RiZoeL[1])
-                 sleeptimet = sleeptimem = float(RiZoeL[0])
+                 counter = int(FLAME[1])
+                 sleeptimet = sleeptimem = float(FLAME[0])
                  for _ in range(counter):
                       reply = random.choice(RAID)
                       caption = f"{username} {reply}"
@@ -256,8 +256,8 @@ async def _(event):
                a = await event.get_reply_message()
                b = await event.client.get_entity(a.sender_id)
                e = b.id
-               if int(e) in Flame:
-                       text = f"I can't raid on @Flame's Owner"
+               if int(e) in FLAME:
+                       text = f"I can't raid on @Flame_PROJECT 's Owner"
                        await event.reply(text, parse_mode=None, link_preview=None )
                elif int(e) == OWNER_ID:
                        text = f"This guy is a owner Of this Bots."
@@ -268,8 +268,8 @@ async def _(event):
                else:
                    c = b.first_name
                    username = f"[{c}](tg://user?id={e})"
-                   sleeptimet = sleeptimem = float(RiZoeL[0])
-                   counter = int(RiZoeL[1])
+                   sleeptimet = sleeptimem = float(FLAME[0])
+                   counter = int(FLAME[1])
                    for _ in range(counter):
                         reply = random.choice(RAID)
                         caption = f"{username} {reply}"
