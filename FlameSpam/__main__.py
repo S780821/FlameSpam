@@ -7,7 +7,7 @@ from pathlib import Path
 from FlameSpam.utils import load_plugins
 import logging
 from telethon import events
-from . import FlameSpam, FlameSpam2, FlameSpam3, FlameSpam4, FlameSpam5, FlameSpam6, FlameSpam7, FlameSpam8, FlameSpam9, FlameSpam10
+from . import Flame, Flame2, Flame3, Flame4, Flame5, Flame6, Flame7, Flame8, Flame9, Flame10
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -25,31 +25,31 @@ print("Flame Bot Spam Successfully deployed -!")
 print("Enjoy! Do visit @FlameSpam")
 
 if __name__ == "__main__":
-    FlameSpam.run_until_disconnected()
+    Flame.run_until_disconnected()
     
 if __name__ == "__main__":
-    FlameSpam2.run_until_disconnected()
+    Flame2.run_until_disconnected()
 
 if __name__ == "__main__":
-    FlameSpam3.run_until_disconnected()
+    Flame3.run_until_disconnected()
     
 if __name__ == "__main__":
-    FlameSpam4.run_until_disconnected()
+    Flame4.run_until_disconnected()
 
 if __name__ == "__main__":
-    FlameSpam5.run_until_disconnected()
+    Flame5.run_until_disconnected()
     
 if __name__ == "__main__":
-    FlameSpam6.run_until_disconnected()
+    Flame6.run_until_disconnected()
     
 if __name__ == "__main__":
-    FlameSpam7.run_until_disconnected()
+    Flame7.run_until_disconnected()
 
 if __name__ == "__main__":
-    FlameSpam8.run_until_disconnected()
+    Flame8.run_until_disconnected()
     
 if __name__ == "__main__":
-    FlameSpam9.run_until_disconnected()
+    Flame9.run_until_disconnected()
 
 if __name__ == "__main__":
-    FlameSpam10.run_until_disconnected()    
+    Flame10.run_until_disconnected()    
