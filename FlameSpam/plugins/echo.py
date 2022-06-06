@@ -10,7 +10,7 @@ from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Fl
 
 from FlameSpam import CMD_HNDLR as hl
 from FlameSpam.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
-from resources.data import FlameX
+from resources.data import Flame
 
 
 @Flame.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
@@ -29,8 +29,8 @@ async def echo(event):
      if event.reply_to_msg_id is not None:
             reply_msg = await event.get_reply_message()
             user_id = reply_msg.sender_id
-            if int(user_id) in FlameX:
-                    text = f"I can't echo @FlameX's Owner"
+            if int(user_id) in Flame:
+                    text = f"I can't echo @Flame_updates's Owner"
                     await event.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
                     text = f"This guy is a owner Of this Bots."
