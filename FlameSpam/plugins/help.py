@@ -1,4 +1,4 @@
-from FlameXSpam import Flame, Flame2, Flame3, Flame4, Flame5, Flame6, Flame7, Flame8, Flame9, Flame10, SUDO_USERS
+from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5, Flame6, Flame7, Flame8, Flame9, Flame10, SUDO_USERS
 from telethon import events, Button
 from telethon.tl.custom import button
 from time import time
