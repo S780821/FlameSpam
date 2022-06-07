@@ -178,7 +178,7 @@ async def pspam(e):
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Flame = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-      Ok  if len(Flame) == 1:
+        if len(Flame) == 1:
             counter = int(Flame[0])
             if int(e.chat_id) in GROUP:
                 text = f"Sorry !! I can't spam here"
