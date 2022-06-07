@@ -3,7 +3,7 @@ import asyncio
 import sys
 import git
 import heroku3
-from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Flame8, Flame9, Flame10, OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, Flameversion
+from FlameSpam import Flame, Flame2, Flame3, Flame4, Flame5 , Flame6, Flame7, Flame8, Flame9, Flame10, OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, flameversion
 from FlameSpam import CMD_HNDLR as hl
 from telethon.tl.functions.users import GetFullUserRequest
 from FlameSpam import ALIVE_PIC
