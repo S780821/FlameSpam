@@ -7,7 +7,7 @@ from .. import Flame, Flame2, Flame3, Flame4, Flame5, Flame6, Flame7, Flame8, Fl
 from FlameSpam.plugins.help import *
 
 
-RIZ_IMG = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/2c23f012984fa91267146.jpg"
+FLAME_IMG = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/2c23f012984fa91267146.jpg"
 
 Flame_Button = [
         [
@@ -54,7 +54,7 @@ async def start(event):
        ownermsg = f"**Hi Master, Its me {bot_id}, Your Spam Bot !! \n\n Click Below Buttons For help**"
        usermsg = f"**Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Below.** \n\n**𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 [ FLAME ](https://t.me/FLAME_UPDATES)**"
        if event.sender_id == OWNER_ID:
-            await event.client.send_file(ThflameL,
+            await event.client.send_file(flame,
                   FLAME_IMG,
                   caption=ownermsg, 
                   buttons=Flame_Button)
