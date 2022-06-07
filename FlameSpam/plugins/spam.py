@@ -44,16 +44,16 @@ async def spam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        Flameoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        Flame = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(Flameoel) == 2:
-            message = str(Flameoel[1])
-            counter = int(Flameoel[0])
+        if len(Flame) == 2:
+            message = str(Flame[1])
+            counter = int(Flame[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None)
             await asyncio.wait([e.respond(message) for i in range(counter)])
         elif e.reply_to_msg_id and smex.media:
-            counter = int(Flameoel[0])
+            counter = int(Flame[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None)
             for _ in range(counter):
@@ -61,7 +61,7 @@ async def spam(e):
                 await gifspam(e, smex)
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
-            counter = int(Flameoel[0])
+            counter = int(Flame[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None)
             await asyncio.wait([e.respond(message) for i in range(counter)])
@@ -86,9 +86,9 @@ async def spam(e):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         rizoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(rizoel) == 2:
-            message = str(rizoel[1])
-            counter = int(rizoel[0])
+        if len(Flame) == 2:
+            message = str(Flame[1])
+            counter = int(Flame[0])
             for _ in range(counter):
                  async with e.client.action(e.chat_id, "typing"):
                      if e.reply_to_msg_id:
@@ -97,7 +97,7 @@ async def spam(e):
                           await e.client.send_message(e.chat_id, message)
                  await asyncio.sleep(0.3)
         elif e.reply_to_msg_id and smex.media:  
-            counter = int(rizoel[0])
+            counter = int(Flame[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
@@ -105,7 +105,7 @@ async def spam(e):
                 await asyncio.sleep(0.3)  
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
-            counter = int(rizoel[0])
+            counter = int(Flame[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, message)
@@ -130,12 +130,12 @@ async def spam(e):
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         smex = await e.get_reply_message()
-        Flameoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-        Flameoelsexy = Flameoel[1:]
+        Flame = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+        Flame = Flame[1:]
         if len(Flameoelsexy) == 2:
-            message = str(Flameoelsexy[1])
-            counter = int(Flameoelsexy[0])
-            sleeptime = float(Flameoel[0])
+            message = str(Flame[1])
+            counter = int(Flame[0])
+            sleeptime = float(Flame[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     if e.reply_to_msg_id:
@@ -144,8 +144,8 @@ async def spam(e):
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(sleeptime)
         elif e.reply_to_msg_id and smex.media:
-            counter = int(Flameoelsexy[0])
-            sleeptime = float(Flameoel[0])
+            counter = int(Flame[0])
+            sleeptime = float(Flame[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
@@ -153,12 +153,12 @@ async def spam(e):
                 await asyncio.sleep(sleeptime)
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
-            counter = int(Flameoelsexy[0])
-            sleeptime = float(Flameoel[0])
+            counter = int(Flame[0])
+            sleeptime = float(fgf[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(sleeptime)
+                    await asyncio.sleecFlamep(sleeptime)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
 
@@ -177,9 +177,9 @@ async def pspam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        rizoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(rizoel) == 1:
-            counter = int(rizoel[0])
+        Flame = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+      Ok  if len(Flame) == 1:
+            counter = int(Flame[0])
             if int(e.chat_id) in GROUP:
                 text = f"Sorry !! I can't spam here"
                 await e.reply(text, parse_mode=None, link_preview=None )
@@ -208,8 +208,8 @@ async def hang(e):
     usage = f"**MODULE NAME : HANG SPAM** \n\n Cmd : `{hl}hang <count>`"
     if e.sender_id in SUDO_USERS:
         RiZoeL = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(RiZoeL) == 1:
-            counter = int(RiZoeL[0])
+        if len(Flame) == 1:
+            counter = int(Flame[0])
             if int(e.chat_id) in GROUP:
                 text = f"Sorry !! I can't spam here"
                 await e.reply(text, parse_mode=None, link_preview=None )
