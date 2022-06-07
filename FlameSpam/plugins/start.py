@@ -49,7 +49,7 @@ async def start(event):
        bot_id = FlameBot.first_name
        bot_username = FlameBot.username
        replied_user = await event.client(GetFullUserRequest(event.sender_id))
-       TheRiZoeL = event.chat_id
+       flame = event.chat_id
        firstname = replied_user.user.first_name
        ownermsg = f"**Hi Master, Its me {bot_id}, Your Spam Bot !! \n\n Click Below Buttons For help**"
        usermsg = f"**Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Below.** \n\n**𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 [ FLAME ](https://t.me/FLAME_UPDATES)**"
